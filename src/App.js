@@ -49,6 +49,9 @@ function App() {
             <Route path="/allBlog/:_id" >
               <BlogDetails></BlogDetails>
              </Route>
+            <Route path="/addAmin" >
+            <AddAdmin></AddAdmin>
+             </Route>
 
              <PrivateRoute path="/dashboard" >
              <DashBoard></DashBoard>
@@ -58,7 +61,7 @@ function App() {
           {/* <h1>Blog</h1>
           <Login></Login>
       <Home></Home>
-      <AddAdmin></AddAdmin>
+      
        */}
        </UserContext.Provider>
      

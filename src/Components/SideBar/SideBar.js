@@ -20,15 +20,15 @@ const SideBar = () => {
 
     return (
         <div className="sidebar">
-          { isAdmin && <div>
+          {/* { isAdmin && <div> */}
                 <Link to="/admin" className="active" >Dashboard</Link>
                 <Link to="/manageblog"> Manage Blog</Link>
-                <Link to="/allOrder" >All Order</Link>
+                
                 <Link to="/addBlog" >Add Blog</Link>
                 <Link to="/addAdmin" >Create admin</Link>
                 
               
-            </div>}
+            {/* </div>} */}
 
            
             <Link to="/addReview" >Review</Link>
