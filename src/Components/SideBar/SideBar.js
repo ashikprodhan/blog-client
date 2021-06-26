@@ -27,7 +27,7 @@ const SideBar = () => {
                 <Link to="/manageblog"> Manage Blog</Link>
                 
                 <Link to="/addBlog" >Add Blog</Link>
-                <Link to="/addAdmin" >Create admin</Link>
+                <Link to="/createAdmin" >Create admin</Link>
                 
               
             </div>}

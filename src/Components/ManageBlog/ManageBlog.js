@@ -30,7 +30,9 @@ const ManageBlog = () => {
 
      const renderBlogList= blog.map( blog =>{
 
-       return (<div key={blog._id} > <p>{blog.title} name:{blog.title}<button type="button" className="btn btn-success" ><FontAwesomeIcon icon={faEdit} /></button>  <button type="button" className="btn btn-danger" onClick={()=>deleteBlog(`${blog._id}`)} > <FontAwesomeIcon icon={faTrashAlt} />delete</button> </p> </div>) 
+       return (<div className="d-flex" key={blog._id} > <p> {blog.title} <button type="button" className="btn btn-success" ><FontAwesomeIcon icon={faEdit} /></button>  <button type="button" className="btn btn-danger" onClick={()=>deleteBlog(`${blog._id}`)} > <FontAwesomeIcon icon={faTrashAlt} />delete</button> </p>
+               
+        </div>) 
      })
 
     return (

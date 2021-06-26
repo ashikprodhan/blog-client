@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import { useEffect } from 'react';
 import {
     Link
-  } from "react-router-dom";
+} from "react-router-dom";
+import Blog from '../Blog/Blog';
 // const allBlog =[
 //     {
 //         id:1,
@@ -22,7 +23,7 @@ import {
 //         title:'Title three ',
 //         details:' fljljfjdfjfjsjdffjlfjlsjfjf '
 //     },
-    
+
 // ]
 
 const Home = () => {
@@ -30,29 +31,41 @@ const Home = () => {
     const [blog, setBlog] = useState([])
 
     const renderBlog = blog.map(blog => {
-         const {img,title, details,_id} =blog;
+        const { img, title, details, _id } = blog;
         return (
-            <div key={_id} >
-                <Link to={`/allBlog/${_id}`} className="card">
+            <div className="row row-cols-1 row-cols-md-3 g-4 rounded-3"  >
+                <div className="col">
+                    <div class="card m-1 " style={{ width: '300px' }} >
+                        <img src={img} alt="" />
+
+                        <div class="card-body">
+                            <h5 class="card-title">Medical Support</h5>
+                            {/* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> */}
+                            <Link to="/donate" class="btn btn-primary">see Now</Link >
+                        </div>
+                    </div>
+                </div>
+                {/* <Link to={`/allBlog/${_id}`} className="card">
                 <h3>{title}</h3>
                 <h1>{title}</h1>
-                </Link>
+                </Link> */}
 
 
             </div>
         )
     })
     // console.log(blog);
-    useEffect(()=> {
+    useEffect(() => {
         fetch('https://frozen-gorge-52195.herokuapp.com/allBlog')
-        .then(res => res.json())
-        .then(data =>setBlog(data))
-       
-    },[])
+            .then(res => res.json())
+            .then(data => setBlog(data))
+
+    }, [])
     return (
-        <div>
-            <h1>Home</h1>
-            {renderBlog}
+        <div className="row row-cols-1 row-cols-md-3 g-4 rounded-3">
+            {
+                blog.map( blog => <Blog key={blog._id}  blog={blog}  ></Blog> )
+             }
         </div>
     );
 };

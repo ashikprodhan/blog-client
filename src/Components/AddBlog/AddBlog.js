@@ -39,18 +39,22 @@ const AddBlog = () => {
         
     }
     return (
-        <div>
+        <div className="add-blog container" >
             <h1>add blog</h1>
+            <div className="row">
             <form onSubmit={handleSubmit(onSubmit)}>
-     <input type="file"  {...register("img")} onChange={handleImgUpload} />
-      <input {...register("title")} />
-      <input {...register("details")} />
+     <div className="col"><label  htmlFor="">add image</label>  <input  className="form-control" type="file"  {...register("img")} onChange={handleImgUpload} /></div>
+    <div className="col"> <label className="col-form-label" htmlFor="">Title</label>  <input  className="form-control " {...register("title")} /></div>
+   <br />
+   {/* <label className="col" htmlFor="">Details</label> <input  className="col-form-label"{...register("details")} /> */}
+      <br />
       
-      
-     
+     <textarea className="form-control" name="" id="" cols="30" rows="10"  {...register("details")}></textarea>
      
       <input type="submit" />
     </form>
+            </div>
+    
         </div>
     );
 };
