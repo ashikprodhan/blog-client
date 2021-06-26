@@ -52,6 +52,7 @@ const AddBlog = () => {
      <textarea className="form-control" name="" id="" cols="30" rows="10"  {...register("details")}></textarea>
      
       <input type="submit" />
+      
     </form>
             </div>
     

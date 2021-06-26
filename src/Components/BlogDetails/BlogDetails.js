@@ -8,7 +8,7 @@ const BlogDetails = () => {
     const { _id } = useParams();
     const [bDetails, setBDetails] = useState({})
     console.log(bDetails);
-    const {img, description}= bDetails;
+    const {img,title, description}= bDetails;
     useEffect(()=>{
     fetch(`https://frozen-gorge-52195.herokuapp.com/allBlog/${_id}`)
     .then(res => res.json())
@@ -24,8 +24,9 @@ const BlogDetails = () => {
 
     return (
         <div>
-           <h1>blog details</h1>
-           <p>{description}</p>
+           <h1>{title}</h1>
+           <img src={img} alt="" />
+           <p className="fw-bolder" >{description}</p>
         </div>
     );
 };
