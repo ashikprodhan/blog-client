@@ -13,7 +13,7 @@ const AddBlog = () => {
             description :data.details
         }
         axios
-      .post('http://localhost:5000/addBlog', newBlog)
+      .post('https://frozen-gorge-52195.herokuapp.com/addBlog', newBlog)
       .then(() => console.log('Blog Created'))
       .catch(err => {
         console.error(err);

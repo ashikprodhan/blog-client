@@ -9,7 +9,7 @@ const AddAdmin = () => {
         const adminEmail={admin:data.email};
         console.log(adminEmail);
 
-        // const url = `http://localhost:5000/addAdmin`;
+        // const url = `https://frozen-gorge-52195.herokuapp.com/addAdmin`;
         // console.log(adminEmail)
 
         // fetch(url, {
@@ -22,7 +22,7 @@ const AddAdmin = () => {
         //     .then(res => console.log('server side response', res))
 
         axios
-        .post('http://localhost:5000/addAdmin', adminEmail)
+        .post('https://frozen-gorge-52195.herokuapp.com/addAdmin', adminEmail)
         .then(() => console.log('Admin Created'))
         .catch(err => {
           console.error(err);

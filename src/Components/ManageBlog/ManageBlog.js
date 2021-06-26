@@ -11,14 +11,14 @@ const ManageBlog = () => {
     // console.log(blog);
     // console.log(_id);
     useEffect(() => {
-        fetch('http://localhost:5000/allBlog')
+        fetch('https://frozen-gorge-52195.herokuapp.com/allBlog')
             .then(res => res.json())
             .then(data => setBlog(data))
 
     }, [])
 
     const deleteBlog = (id) => {
-        fetch(`http://localhost:5000/delete/${id}`,{
+        fetch(`https://frozen-gorge-52195.herokuapp.com/delete/${id}`,{
             method: 'DELETE'
         })
           .then(res => res.json())

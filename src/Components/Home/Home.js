@@ -44,7 +44,7 @@ const Home = () => {
     })
     // console.log(blog);
     useEffect(()=> {
-        fetch('http://localhost:5000/allBlog')
+        fetch('https://frozen-gorge-52195.herokuapp.com/allBlog')
         .then(res => res.json())
         .then(data =>setBlog(data))
        

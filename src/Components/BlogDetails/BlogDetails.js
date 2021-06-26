@@ -10,11 +10,11 @@ const BlogDetails = () => {
     console.log(bDetails);
     const {img, description}= bDetails;
     useEffect(()=>{
-    fetch(`http://localhost:5000/allBlog/${_id}`)
+    fetch(`https://frozen-gorge-52195.herokuapp.com/allBlog/${_id}`)
     .then(res => res.json())
     .then(data => setBDetails(data) )
     // axios
-    // .post(`http://localhost:5000/allBlog/${_id}`)
+    // .post(`https://frozen-gorge-52195.herokuapp.com/allBlog/${_id}`)
     // .then(res => res.json())
     // .then(data => console.log(data) )
     // .catch(err => {
