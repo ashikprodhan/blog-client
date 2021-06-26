@@ -6,16 +6,17 @@ const Header = () => {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light bg-transparent">
                 <div className="container-fluid">
-                    <Link to="/home" className="navbar-brand">Fresh Mart</Link>
+                    <Link to="/home" className="navbar-brand">Blog</Link>
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                         <div className="navbar-nav ms-auto">
                             <Link to="/" className="nav-link active" aria-current="page">Home</Link>
-                            <Link to="/orders" className="nav-link active">Orders</Link>
+                            
                             <Link to="/dashboard" className="nav-link active">Dashboard</Link>
-                            <Link to="/deals" className="nav-link active">Deals</Link>
+                            <Link to="/createAdmin" className="nav-link active">Create admin</Link>
+                            
                             <Link to="/login" className="nav-link active">Login</Link>
 
 

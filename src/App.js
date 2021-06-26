@@ -17,6 +17,7 @@ import ManageBlog from './Components/ManageBlog/ManageBlog';
 import DashBoard from './Components/DashBoard/DashBoard';
 import Header from './Components/Header/Header';
 import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+import CreateAdmin from './Components/CreateAdmin/CreateAdmin';
 
 export const UserContext = createContext();
 
@@ -41,6 +42,10 @@ function App() {
 
             <Route path="/addBlog">
             <AddBlog></AddBlog>
+            </Route>
+            <Route path="/createAdmin">
+              <CreateAdmin></CreateAdmin>
+            {/* <AddBlog></AddBlog> */}
             </Route>
             {/* <Route path="/dashboard">
            

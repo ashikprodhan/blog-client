@@ -6,7 +6,8 @@ import { UserContext } from '../../App';
 const SideBar = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext)
     const [isAdmin, setIsAdmin] = useState(false)
-    console.log(isAdmin,'from admin');
+    
+
     useEffect(() => {
         fetch('http://localhost:5000/isAdmin', {
             method: 'POST',
@@ -14,13 +15,13 @@ const SideBar = () => {
             body: JSON.stringify({ email: loggedInUser.email })
         })
             .then(res => res.json())
-            .then(data => setIsAdmin(data));
+            .then(data =>setIsAdmin(data))
         
     },[])
 
     return (
         <div className="sidebar">
-          {/* { isAdmin && <div> */}
+          { isAdmin && <div>
                 <Link to="/admin" className="active" >Dashboard</Link>
                 <Link to="/manageblog"> Manage Blog</Link>
                 
@@ -28,7 +29,7 @@ const SideBar = () => {
                 <Link to="/addAdmin" >Create admin</Link>
                 
               
-            {/* </div>} */}
+            </div>}
 
            
             <Link to="/addReview" >Review</Link>
