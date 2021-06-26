@@ -12,6 +12,11 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import BlogDetails from './Components/BlogDetails/BlogDetails';
+import ManageBlog from './Components/ManageBlog/ManageBlog';
+import DashBoard from './Components/DashBoard/DashBoard';
+import Header from './Components/Header/Header';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext();
 
@@ -21,26 +26,40 @@ function App() {
     <div className="App">
        <UserContext.Provider value={[loggedInUser, setLoggedInUser]} >
        <Router>
-          
+          <Header></Header>
           <Switch>
             <Route exact path="/">
               <Home></Home>
             </Route>
-            <Route path="/home">
-              <Home></Home>
-            </Route>
+            
             <Route path="/login">
               <Login></Login>
             </Route>
-            
+            <Route path="/manageBlog">
+              <ManageBlog></ManageBlog>
+            </Route>
 
+            <Route path="/addBlog">
+            <AddBlog></AddBlog>
+            </Route>
+            {/* <Route path="/dashboard">
+           
+            </Route> */}
+
+            <Route path="/allBlog/:_id" >
+              <BlogDetails></BlogDetails>
+             </Route>
+
+             <PrivateRoute path="/dashboard" >
+             <DashBoard></DashBoard>
+             </PrivateRoute>
           </Switch>
         </Router>
           {/* <h1>Blog</h1>
           <Login></Login>
       <Home></Home>
       <AddAdmin></AddAdmin>
-      <AddBlog></AddBlog> */}
+       */}
        </UserContext.Provider>
      
     </div>
